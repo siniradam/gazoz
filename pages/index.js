@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
+import Channels from "../components/Channels";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
 import requests from "../utils/requests";
+
+import yt from "../utils/channels";
 
 export default function Home({ results }) {
   return (
@@ -20,7 +22,8 @@ export default function Home({ results }) {
       <Nav />
 
       {/* Results */}
-      <Results results={results} />
+      <Channels list={yt.channels} />
+      {/* <Results results={results} /> */}
     </div>
   );
 }
