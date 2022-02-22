@@ -16,6 +16,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
         width={1920}
         height={1080}
+        alt={result.title || result.original_name}
       />
       <div>
         <p className='truncate max-w-md'>{result.overview}</p>

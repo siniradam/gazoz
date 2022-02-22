@@ -27,6 +27,7 @@ function Header() {
           width={208}
           height={64}
           className='object-contain'
+          alt='Gazoz'
         />
       </div>
     </header>
