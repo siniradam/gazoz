@@ -10,7 +10,7 @@ function LatestVideos({ channel, latest }) {
       {/* title does not show up. */}
       <FlipMove className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:flex flex-wrap justify-center'>
         {latest.items.map((video) => {
-          return <VideoThumbnail video={video} />;
+          return <VideoThumbnail key={video.id.videoId} video={video} />;
         })}
       </FlipMove>
     </>
