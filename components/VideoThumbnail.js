@@ -1,14 +1,16 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { forwardRef } from "react";
 
 const VideoThumbnail = forwardRef(({ video }, ref) => {
+  const router = useRouter();
   const v = video.snippet;
   return (
     <div
       ref={ref}
       className='group cursor-pointer m-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'
       onClick={() => {
-        router.push("/video/");
+        router.push(`/play/${video.id.videoId}`);
       }}
     >
       <Image
