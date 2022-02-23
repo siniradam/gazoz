@@ -1,15 +1,18 @@
+import { useRouter } from "next/router";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import React from "react";
 import { forwardRef } from "react";
 
 const Channel = forwardRef(({ data }, ref) => {
-  const BASE_URL = "https://image.tmdb.org/t/p/original/";
-
+  const router = useRouter();
   return (
     <div
       ref={ref}
       className='group cursor-pointer m-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'
+      onClick={() => {
+        router.push("/channel/" + data.id);
+      }}
     >
       <Image
         layout='responsive'

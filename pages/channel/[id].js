@@ -2,11 +2,13 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "../../components/Header";
 import Nav from "../../components/Nav";
-import Channels from "../../components/Channels";
 
-import channels from "../../utils/channels";
+import yt from "../../utils/channels";
+import youtube from "../../utils/youtube";
+import Playlists from "../../components/Playlists";
+import LatestVideos from "../../components/LatestVideos";
 
-const Channel = ({ results }) => {
+const Channel = ({ channel, latest, playlists }) => {
   const router = useRouter();
   const { pid } = router.query;
 
@@ -24,21 +26,27 @@ const Channel = ({ results }) => {
       <Nav />
 
       {/* Results */}
-      <Channels results={results} />
+      <LatestVideos channel={channel} latest={latest} />
+      <Playlists channel={channel} playlists={playlists} />
     </div>
   );
 };
 export async function getServerSideProps(context) {
-  const channelList = channels.find((channel) => channel.category === pid);
+  const YOUTUBE_KEY = process.env.YOUTUBE_KEY;
 
-  //   const request = await fetch(
-  //     `${youtube.apiurl}/channels?id=`
-  //   ).then((res) => res.json());
+  const { id } = context.query;
+  const channel = yt.channels.filter((channel) => channel.id === id);
+
+  //  const request = await fetch(`${youtube.apiurl}/channels?id=${id}`).then(
+  const request = await fetch(
+    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=10&order=date&type=video&key=${YOUTUBE_KEY}`
+  ).then((res) => res.json());
 
   return {
     props: {
-      list: channelList,
-      //      youtube: request,
+      channel: channel,
+      latest: request,
+      playlists: channel.playlists || [],
     },
   };
 }

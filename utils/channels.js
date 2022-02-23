@@ -1,7 +1,7 @@
 export default {
   channels: [
     {
-      id: "UCyDuhTji3MbWz-SINJf8kAA",
+      id: "UCrG27KDq7eW4YoEOYsalU9g",
       title: "Nevşin Mengü",
       isLive: true,
       category: "news",
@@ -22,14 +22,13 @@ export default {
       ],
     },
     {
-      id: "UCoYda0d3XMcpzn-NhxgWSOg",
+      id: "UCmZUVTP8dtWqmsVhqt7tPEQ",
       title: "Omnibus",
       isLive: false,
       category: "independent",
       thumbnail: "omnibus_thumbnail.jpg",
       poster: "omnibus_poster.jpg",
-      description:
-        "om·​ni·​bus |  ˈäm-ni-(ˌ)bəs: for all, everything included.",
+      description: "om·​ni·​bus | ˈäm-ni-(ˌ)bəs: for all, everything included.",
 
       playlists: [
         {
@@ -55,7 +54,7 @@ export default {
       ],
     },
     {
-      id: "UCEhIFtbOMs0pMLgSB_UPVRA",
+      id: "UC-xTvXTm-lrLWYk308-Km3A",
       title: "Flu TV",
       isLive: false,
       category: "independent",
