@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
 
   //  const request = await fetch(`${youtube.apiurl}/channels?id=${id}`).then(
   const request = await fetch(
-    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=10&order=date&type=video&key=${YOUTUBE_KEY}`
+    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
   ).then((res) => res.json());
 
   return {

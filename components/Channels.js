@@ -1,16 +1,19 @@
 import React from "react";
-import FlipMove from "react-flip-move";
+import { Flipper, Flipped } from "react-flip-toolkit";
+
 import Channel from "./Channel";
 import Thumbnail from "./Thumbnail";
 
 function Channels({ list }) {
   //   console.log(list);
   return (
-    <FlipMove className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:flex flex-wrap justify-center'>
+    <Flipper className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5'>
       {list.map((channel) => (
-        <Channel key={channel.id} data={channel} />
+        <Flipped key={channel.id}>
+          <Channel data={channel} />
+        </Flipped>
       ))}
-    </FlipMove>
+    </Flipper>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import FlipMove from "react-flip-move";
+import { Flipper, Flipped } from "react-flip-toolkit";
 import VideoThumbnail from "./VideoThumbnail";
 
 function LatestVideos({ channel, latest }) {
@@ -8,11 +8,15 @@ function LatestVideos({ channel, latest }) {
     <>
       <h1>{channel.title}</h1>
       {/* title does not show up. */}
-      <FlipMove className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:flex flex-wrap justify-center'>
+      <Flipper className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {latest.items.map((video) => {
-          return <VideoThumbnail key={video.id.videoId} video={video} />;
+          return (
+            <Flipped key={video.id.videoId}>
+              <VideoThumbnail video={video} />
+            </Flipped>
+          );
         })}
-      </FlipMove>
+      </Flipper>
     </>
   );
 }

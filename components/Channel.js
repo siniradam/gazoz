@@ -14,21 +14,25 @@ const Channel = forwardRef(({ data }, ref) => {
         router.push("/channel/" + data.id);
       }}
     >
-      <Image
-        layout='responsive'
-        src={`/channels/${data.thumbnail}`}
-        width={1920}
-        height={1080}
-        alt={data.title}
-      />
+      {data.thumbnail ? (
+        <Image
+          layout='responsive'
+          src={`/channels/${data.thumbnail}`}
+          width={1920}
+          height={1080}
+          alt={data.title}
+        />
+      ) : (
+        <p>{data.title}</p>
+      )}
       <div>
         <p className='truncate max-w-md'>{data.description}</p>
         <h2 className='mt-1 text-2xl text-white transition-all duration-100 ease-in-out'>
           {data.title}
         </h2>
-        <p className='flex items-center opacity-0 group-hover:opacity-100'>
+        {/* <p className='flex items-center opacity-0 group-hover:opacity-100'>
           <ThumbUpIcon className='h-5 mx-2' />
-        </p>
+        </p> */}
       </div>
     </div>
   );
