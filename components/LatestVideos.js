@@ -14,7 +14,7 @@ function LatestVideos({ channel, latest }) {
       <Flipper className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {videos.length === 0 ? (
           <p>
-            Seems like we've reached end of the quota.
+            Seems like we&apos;ve reached end of the quota.
             <br />
             This is time for us ({time})
             <br />
