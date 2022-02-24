@@ -175,6 +175,38 @@ export default {
       description:
         "Akademisyen, 15 yıl ABD, Şimdi Prof Dr., @sabanciu Finans Kürsü Başkanı. http://cef.sabanciuniv.edu Kurucu Başkanı. Finans, Teknoloji.",
     },
+    {
+      id: "UCnAlXnZRNikus5wf4BPu4_A",
+      title: "Basfi ile Deneysel Bilim",
+      isLive: false,
+      category: "science",
+      thumbnail: "basfi_thumbnail.jpg",
+      poster: "basfi_poster.jpg",
+      description:
+        "Basfi ile deneyler yaparak hep birlikte öğreniyoruz. Her hafta yayınladığımız videolar ile herkes için, herkese göre basit ve anlaşılır videolarımızla bilimin sırlarını çözüyoruz. Bilim hiç bu kadar eğlenceli olmamıştı!",
+      playlists: [],
+    },
+    {
+      id: "UCatnasFAiXUvWwH8NlSdd3A",
+      title: "Evrim Ağacı",
+      isLive: false,
+      category: "science",
+      thumbnail: "evrim_thumbnail.jpg",
+      poster: "evrim_poster.jpg",
+      description:
+        " Türkiye'deki bilimseverlerin buluşma noktası olan Evrim Ağacı. Fizik, biyoloji, kozmoloji, psikoloji ve bilim felsefesi alanında videolar.",
+      playlists: [],
+    },
+    {
+      id: "UCO-_F5ZEUhy0oKrSa69DLMw",
+      title: "140 Journos",
+      isLive: false,
+      category: "documentary",
+      thumbnail: "140journos_thumbnail.jpg",
+      poster: "140journos_poster.jpg",
+      description: "Türkiye’yi anlamak için 140journos.",
+      playlists: [],
+    },
   ],
   categories: [
     {
@@ -193,10 +225,10 @@ export default {
     //   id: "technology",
     //   title: "Teknoloji",
     // },
-    {
-      id: "business",
-      title: "İş",
-    },
+    // {
+    //   id: "business",
+    //   title: "İş",
+    // },
     {
       id: "science",
       title: "Bilim",
