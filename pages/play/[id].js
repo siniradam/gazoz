@@ -12,10 +12,10 @@ function Play({ video }) {
         width='100%'
         height='100%'
         src={`//www.youtube.com/embed/${id}`}
-        frameborder='0'
+        frameBorder='0'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowfullscreen
-        autoplay='1'
+        allowFullScreen
+        autoPlay='1'
         widget_referrer='https://gazoz.vercel.app/'
         cc_lang_pref='tr'
         hl='tr-tr'
