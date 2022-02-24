@@ -26,27 +26,49 @@ const Channel = ({ channel, latest, playlists }) => {
       <Nav />
 
       {/* Results */}
-      <LatestVideos channel={channel} latest={latest} />
+      {/* <LatestVideos channel={channel} latest={latest} /> */}
       <Playlists channel={channel} playlists={playlists} />
     </div>
   );
 };
 export async function getServerSideProps(context) {
   const YOUTUBE_KEY = process.env.YOUTUBE_KEY;
+  const YOUTUBE_KEY_ALT = process.env.YOUTUBE_KEY_ALT;
 
   const { id } = context.query;
-  const channel = yt.channels.filter((channel) => channel.id === id);
+  const channel = yt.channels.find((channel) => channel.id === id);
 
-  //  const request = await fetch(`${youtube.apiurl}/channels?id=${id}`).then(
-  const request = await fetch(
-    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
+  // Channel Details
+  //`${youtube.apiurl}/channels?part=snippet&id=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
+
+  // Videos
+  //`${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
+
+  const latest = await fetch(
+    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&&key=${YOUTUBE_KEY}`
   ).then((res) => res.json());
+
+  let playlistItems = channel.playlists;
+
+  const playlists = playlistItems[0]
+    ? await fetch(
+        `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${playlistItems[0].id}&key=${YOUTUBE_KEY_ALT}`
+      ).then((res) => res.json())
+    : [];
+
+  //https://www.googleapis.com/youtube/v3/?part=snippet&playlistId=PLLxcPkP3uSOZYen_E3NON-eV6qJDMMBrh&key=AIzaSyBvh5J818CEzba6X8261c2WBkULb918AQ4&maxResults=12
 
   return {
     props: {
       channel: channel,
-      latest: request,
-      playlists: channel.playlists || [],
+      latest: latest, //|| {},
+      playlists:
+        [
+          {
+            title: playlistItems[0] ? playlistItems[0].title : "",
+            content: playlists,
+          },
+        ] || [],
     },
   };
 }

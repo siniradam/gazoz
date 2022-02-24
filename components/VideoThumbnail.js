@@ -5,19 +5,30 @@ import React, { forwardRef } from "react";
 const VideoThumbnail = forwardRef(({ video }, ref) => {
   const router = useRouter();
   const v = video.snippet;
+  const { thumbnails } = v;
+  const thumbnail =
+    thumbnails.high ||
+    thumbnails.maxres ||
+    thumbnails.standard ||
+    thumbnails.medium ||
+    thumbnails.default;
+
+  if (!thumbnail) {
+    return null;
+  }
   return (
     <div
       ref={ref}
       className='group cursor-pointer m-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'
       onClick={() => {
-        router.push(`/play/${video.id.videoId}`);
+        router.push(`/play/${video.id.videoId || v.resourceId.videoId}`);
       }}
     >
       <Image
         layout='responsive'
-        src={`${v.thumbnails.high.url}`}
-        width={v.thumbnails.high.width}
-        height={v.thumbnails.high.height}
+        src={`${thumbnail.url}`}
+        width={thumbnail.width}
+        height={thumbnail.height}
         alt={v.title}
       />
       <div>

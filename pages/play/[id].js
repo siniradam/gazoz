@@ -29,9 +29,9 @@ function Play({ video }) {
 //TODO: Fetch video player
 
 export async function getServerSideProps(context) {
-  const YOUTUBE_KEY = process.env.YOUTUBE_KEY;
+  const YOUTUBE_KEY_ALT = process.env.YOUTUBE_KEY_ALT;
   const { id } = context.query;
-  const url = `${youtube.apiurl}/videos?part=statistics,player&id=${id}&key=${YOUTUBE_KEY}`;
+  const url = `${youtube.apiurl}/videos?part=statistics,player&id=${id}&key=${YOUTUBE_KEY_ALT}`;
 
   const request = await fetch(url).then((res) => res.json());
 
