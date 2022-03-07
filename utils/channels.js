@@ -216,6 +216,10 @@ export default {
           id: "PL48IwtBKtXrYcvOEp_oT4d5K3c7HPHdFR",
           title: "Canlı Bilim: Bilimsel Sohbetler, Canlı Yayınlar.",
         },
+        {
+          id: "PL48IwtBKtXrZpobECYTMtF-c5HgH3wHV6",
+          title: "Evrim Ağacı #shorts",
+        },
       ],
     },
     {
@@ -309,7 +313,12 @@ export default {
       // poster: "iksv_poster.jpg",
       description:
         "İstanbul Kültür Sanat Vakfı’nın (İKSV) resmi kanalı. İKSV, 1973'ten bu yana kültür ve sanatın gelişimi için çalışan bağımsız bir kurumdur.",
-      playlists: [],
+      playlists: [
+        {
+          id: "PLuQa3KrjTxnTlhZwUNxyiAzs82hO8bTpM",
+          title: "Film Ekimi",
+        },
+      ],
     },
     {
       id: "UCUnwimZlOXfAedrmRfguS1g",
@@ -331,7 +340,12 @@ export default {
       // poster: "32gun_poster.jpg",
       description:
         "Mehmet Ali Birand'ın sunduğu ekran klasiği 32. Gün programının 1985'ten bugüne video arşivi. ",
-      playlists: [],
+      playlists: [
+        {
+          id: "PL19EshdPt3R-2Hts2PffsR2dZ14uvNAV1",
+          title: "Editörün Seçtikleri",
+        },
+      ],
     },
     {
       id: "UCogJiJqx8I6ZoPaRKsdwgaA",
