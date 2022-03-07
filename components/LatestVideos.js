@@ -9,9 +9,9 @@ function LatestVideos({ channel, latest }) {
 
   return (
     <>
-      <h1>{channel.title}</h1>
+      <h1 className='px-7 pt-5 text-xl font-bold'>{channel.title}</h1>
       {/* title does not show up. */}
-      <Flipper className='px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+      <Flipper className='px-5 mt-5 sm:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {videos.length === 0 ? (
           <p>
             Seems like we&apos;ve reached end of the quota.

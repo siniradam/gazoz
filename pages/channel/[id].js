@@ -26,7 +26,7 @@ const Channel = ({ channel, latest, playlists }) => {
       <Nav />
 
       {/* Results */}
-      {/* <LatestVideos channel={channel} latest={latest} /> */}
+      <LatestVideos channel={channel} latest={latest} />
       <Playlists channel={channel} playlists={playlists} />
     </div>
   );
@@ -37,31 +37,24 @@ export async function getServerSideProps(context) {
 
   const { id } = context.query;
   const channel = yt.channels.find((channel) => channel.id === id);
+  const uploadsPlaylistId = `UU${channel.id.slice(2)}`;
 
-  // Channel Details
-  //`${youtube.apiurl}/channels?part=snippet&id=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
-
-  // Videos
-  //`${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&order=date&type=video&key=${YOUTUBE_KEY}`
-
-  const latest = await fetch(
-    `${youtube.apiurl}/search?part=snippet&channelId=${id}&maxResults=12&&key=${YOUTUBE_KEY}`
-  ).then((res) => res.json());
+  const uploads =
+    (await fetch(
+      `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=8&key=${YOUTUBE_KEY}`
+    ).then((res) => res.json())) || [];
 
   let playlistItems = channel.playlists;
-
   const playlists = playlistItems[0]
     ? await fetch(
-        `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${playlistItems[0].id}&key=${YOUTUBE_KEY_ALT}`
+        `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${playlistItems[0].id}&maxResults=8&key=${YOUTUBE_KEY_ALT}`
       ).then((res) => res.json())
     : [];
-
-  //https://www.googleapis.com/youtube/v3/?part=snippet&playlistId=PLLxcPkP3uSOZYen_E3NON-eV6qJDMMBrh&key=AIzaSyBvh5J818CEzba6X8261c2WBkULb918AQ4&maxResults=12
 
   return {
     props: {
       channel: channel,
-      latest: latest, //|| {},
+      latest: uploads, //|| {},
       playlists:
         [
           {

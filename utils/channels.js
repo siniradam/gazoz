@@ -7,17 +7,18 @@ export default {
       category: "news",
       thumbnail: "nevsin_thumbnail.jpg",
       poster: "nevsin_poster.jpg",
+      uploadsPlaylist: "UUrG27KDq7eW4YoEOYsalU9g",
       description:
         "Gazeteci Nevşin Mengü, günün haberlerini derliyor ve özetliyor.",
 
       playlists: [
         {
-          id: "PLLxcPkP3uSOZYen_E3NON-eV6qJDMMBrh",
-          title: "Bugün Ne Oldu",
-        },
-        {
           id: "PLLxcPkP3uSOYHSv43uNQX6QeX2CwPQfFR",
           title: "Özel Röportajlar",
+        },
+        {
+          id: "PLLxcPkP3uSOZYen_E3NON-eV6qJDMMBrh",
+          title: "Bugün Ne Oldu",
         },
       ],
     },
@@ -29,7 +30,7 @@ export default {
       thumbnail: "omnibus_thumbnail.jpg",
       poster: "omnibus_poster.jpg",
       description: "om·​ni·​bus | ˈäm-ni-(ˌ)bəs: for all, everything included.",
-
+      uploadsPlaylist: "UUmZUVTP8dtWqmsVhqt7tPEQ",
       playlists: [
         {
           id: "PL3MElxXutU6522N92vzkmvHrHLnNOjXfa",
@@ -60,17 +61,18 @@ export default {
       category: "independent",
       thumbnail: "flutv_thumbnail.jpg",
       poster: "flutv_poster.jpg",
+      uploadsPlaylist: "UU-xTvXTm-lrLWYk308-Km3A",
       description:
         "Flu TV provides authentic, entertaining content on various subjects from various disciplines.",
 
       playlists: [
         {
-          id: "PLWXQ0iArMOp8DTeTA7g4fKhYWmVBE05Lx",
-          title: "Olmaz Öyle Saçma Enerji",
-        },
-        {
           id: "PLWXQ0iArMOp9uTJi-e43AFHRby8utPBQp",
           title: "Olmaz Öyle Saçma Tarih",
+        },
+        {
+          id: "PLWXQ0iArMOp8DTeTA7g4fKhYWmVBE05Lx",
+          title: "Olmaz Öyle Saçma Enerji",
         },
         {
           id: "PLWXQ0iArMOp9rlsQ_OnOm25BBa_SGg_oR",
@@ -89,6 +91,7 @@ export default {
       category: "news",
       thumbnail: "dwturkce_thumbnail.jpg",
       poster: "dwturkce_poster.jpg",
+      uploadsPlaylist: "UUpi_jv70749NkAmkdugyiPQ",
       description:
         "Deutsche Welle Türkçe Servisi'nin hazırladığı video haberlere bu kanaldan ulaşabilirsiniz.",
 
@@ -123,6 +126,7 @@ export default {
       category: "food",
       thumbnail: "refika_thumbnail.jpg",
       poster: "refika_poster.jpg",
+      uploadsPlaylist: "UUO3MaQR-Vh6cgBZRlD44jWg",
       description:
         "Refika'nın Yemek Okulu haftanın 3 günü 3 yeni yemek tarifi ile sizlerle! Kolay, pratik ama bir o kadar da nefis ve lezzetli yemekler.",
 
@@ -149,8 +153,12 @@ export default {
       thumbnail: "bbcnews_thumbnail.jpg",
       poster: "bbcnews_poster.jpg",
       description: "BBC Türkçe: https://www.bbc.com/turkce",
-
+      uploadsPlaylist: "UUeMQiXmFNTtN3OHlNJxnnUw",
       playlists: [
+        {
+          id: "PLOqqjXTKXvwaarQAYQgB0scG4MGx3-WaF",
+          title: "RÖPORTAJLAR - ÖZEL HABERLER",
+        },
         {
           id: "PLOqqjXTKXvwbpCIDw5xypp6L-54uV02ed",
           title: "Ekonomi",
@@ -158,10 +166,6 @@ export default {
         {
           id: "PLOqqjXTKXvwbErrav0JXm6BbuY4aQb36o",
           title: "Tarihte Bu Hafta",
-        },
-        {
-          id: "PLOqqjXTKXvwaarQAYQgB0scG4MGx3-WaF",
-          title: "RÖPORTAJLAR - ÖZEL HABERLER",
         },
       ],
     },
@@ -172,8 +176,15 @@ export default {
       category: "economics",
       thumbnail: "ozgur_thumbnail.jpg",
       poster: "ozgur_poster.jpg",
+      uploadsPlaylist: "UUiO9MIUiGu2oYYFAG06syjg",
       description:
         "Akademisyen, 15 yıl ABD, Şimdi Prof Dr., @sabanciu Finans Kürsü Başkanı. http://cef.sabanciuniv.edu Kurucu Başkanı. Finans, Teknoloji.",
+      playlists: [
+        {
+          id: "PL7IeULxocsWPlOasTis9ybSnBaRDYY8aQ",
+          title: "Finansal Piyasalar Dünya ve Türkiye Ekonomisi",
+        },
+      ],
     },
     {
       id: "UCnAlXnZRNikus5wf4BPu4_A",
@@ -184,7 +195,12 @@ export default {
       poster: "basfi_poster.jpg",
       description:
         "Basfi ile deneyler yaparak hep birlikte öğreniyoruz. Her hafta yayınladığımız videolar ile herkes için, herkese göre basit ve anlaşılır videolarımızla bilimin sırlarını çözüyoruz. Bilim hiç bu kadar eğlenceli olmamıştı!",
-      playlists: [],
+      playlists: [
+        {
+          id: "PLtGL-kz3wBhuhr13cp3peUCYiyDa_Gemm",
+          title: "Basfi'nin Tüm Deneyleri",
+        },
+      ],
     },
     {
       id: "UCatnasFAiXUvWwH8NlSdd3A",
@@ -195,7 +211,12 @@ export default {
       poster: "evrim_poster.jpg",
       description:
         " Türkiye'deki bilimseverlerin buluşma noktası olan Evrim Ağacı. Fizik, biyoloji, kozmoloji, psikoloji ve bilim felsefesi alanında videolar.",
-      playlists: [],
+      playlists: [
+        {
+          id: "PL48IwtBKtXrYcvOEp_oT4d5K3c7HPHdFR",
+          title: "Canlı Bilim: Bilimsel Sohbetler, Canlı Yayınlar.",
+        },
+      ],
     },
     {
       id: "UCO-_F5ZEUhy0oKrSa69DLMw",
@@ -205,7 +226,12 @@ export default {
       thumbnail: "140journos_thumbnail.jpg",
       poster: "140journos_poster.jpg",
       description: "Türkiye’yi anlamak için 140journos.",
-      playlists: [],
+      playlists: [
+        {
+          id: "PLyyy5cNOa_nQIP885ka6FPJdRDRf_Msu8",
+          title: "Toplum",
+        },
+      ],
     },
     {
       id: "UCJ5KzVnmaIIVyLQUCRii2uw",
@@ -216,7 +242,12 @@ export default {
       thumbnail: "arda_thumbnail.jpg",
       poster: "arda_poster.jpg",
       description: "Ardanın Mutfağı. Yemek Yapmaktan Keyif Alanlara",
-      playlists: [],
+      playlists: [
+        {
+          id: "PLSbIsQrFS6mOia6vjbROJcVvxtsIVj-2Q",
+          title: "Meşhur Türk Mutfağı Yemekleri",
+        },
+      ],
     },
     {
       id: "UC2XC0oI68vtIRWxD-gtEURw",
