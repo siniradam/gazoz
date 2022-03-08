@@ -1,14 +1,64 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
+import YouTube from "react-youtube";
+import HeaderPlayer from "../../components/HeaderPlayer";
 import youtube from "../../utils/youtube";
 
 function Play({ video }) {
   console.log(video);
   const router = useRouter();
   const { id } = router.query;
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isEnded, setIsEnded] = useState(false);
+
+  const onPlay = (event) => {
+    setIsPlaying(true);
+  };
+
+  const onPause = () => {
+    setIsPlaying(false);
+  };
+
+  const onEnd = () => {
+    setIsEnded(true);
+    setIsPlaying(false);
+  };
+
+  const onError = (event) => {};
+
+  const opts = {
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+      rel: 0,
+      modestbranding: 1,
+    },
+  };
+
   return (
     <div className='flex w-screen h-screen'>
-      <iframe
+      <HeaderPlayer visible={!isPlaying} />
+      <YouTube
+        videoId={id} // defaults -> null
+        // id={string} // defaults -> null
+        className='w-screen h-screen' // defaults -> null
+        // containerClassName={string}       // defaults -> ''
+        // title={string}                    // defaults -> null
+        opts={opts} // defaults -> {}
+        // onReady={func}                    // defaults -> noop
+        onPlay={onPlay} // defaults -> noop
+        onPause={onPause} // defaults -> noop
+        onEnd={onEnd} // defaults -> noop
+        onError={onEnd} // defaults -> noop
+        // onStateChange={func}              // defaults -> noop
+        // onPlaybackRateChange={func}       // defaults -> noop
+        // onPlaybackQualityChange={func}    // defaults -> noop
+      />
+      {/* <iframe
         width='100%'
         height='100%'
         src={`//www.youtube.com/embed/${id}`}
@@ -21,7 +71,7 @@ function Play({ video }) {
         hl='tr-tr'
         modestbranding='1'
         rel='0'
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }
