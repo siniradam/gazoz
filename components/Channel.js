@@ -21,6 +21,7 @@ const Channel = forwardRef(({ data }, ref) => {
           width={1920}
           height={1080}
           alt={data.title}
+          className='rounded-md'
         />
       ) : (
         <p>{data.title}</p>

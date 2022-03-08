@@ -18,11 +18,12 @@ function Header() {
         <HeaderItem
           title='TRENDING'
           Icon={LightningBoltIcon}
-          route='trending'
+          // route='trending'
         />
         {/* <HeaderItem title='VERIFIED' Icon={BadgeCheckIcon} /> */}
         <HeaderItem title='COLLECTIONS' Icon={CollectionIcon} />
         <HeaderItem title='SEARCH' Icon={SearchIcon} />
+        {/* <HeaderItem title='About' Icon={SearchIcon} /> */}
         {/* <HeaderItem title='ACCOUNT' Icon={UserIcon} /> */}
       </div>
       <div>

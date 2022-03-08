@@ -30,6 +30,7 @@ const VideoThumbnail = forwardRef(({ video }, ref) => {
         width={thumbnail.width}
         height={thumbnail.height}
         alt={v.title}
+        className='rounded-md'
       />
       <div>
         <p className='truncate max-w-md'>{v.description}</p>
