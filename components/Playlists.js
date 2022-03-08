@@ -7,11 +7,14 @@ function Playlists({ playlists }) {
   const playList = playlists || [];
   return (
     <Flipper className='px-5 my-10 sm:grid md:grid-cols-1 bg-gray-700'>
-      {playList.map((playlist) => (
-        <Flipped key={playlist.content.etag}>
-          <Playlist title={playlist.title} videos={playlist.content.items} />
-        </Flipped>
-      ))}
+      {playList.map((playlist) => {
+        // console.log("PL", playlist);
+        return (
+          <Flipped key={playlist.content.etag}>
+            <Playlist title={playlist.title} videos={playlist.content.items} />
+          </Flipped>
+        );
+      })}
     </Flipper>
   );
 }

@@ -7,6 +7,7 @@ import yt from "../../utils/channels";
 import youtube from "../../utils/youtube";
 import Playlists from "../../components/Playlists";
 import LatestVideos from "../../components/LatestVideos";
+import HeaderChannel from "../../components/HeaderChannel";
 
 const Channel = ({ channel, latest, playlists }) => {
   const router = useRouter();
@@ -24,6 +25,8 @@ const Channel = ({ channel, latest, playlists }) => {
 
       {/* Nav */}
       <Nav />
+
+      <HeaderChannel channel={channel} />
 
       {/* Results */}
       <LatestVideos channel={channel} latest={latest} />

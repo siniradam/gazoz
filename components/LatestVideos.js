@@ -23,7 +23,7 @@ function LatestVideos({ channel, latest }) {
         ) : (
           videos.map((video) => {
             return (
-              <Flipped key={video.id.videoId}>
+              <Flipped key={video.id}>
                 <VideoThumbnail video={video} />
               </Flipped>
             );
