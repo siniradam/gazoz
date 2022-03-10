@@ -6,8 +6,21 @@ import Results from "../components/Results";
 import requests from "../utils/requests";
 
 import yt from "../utils/channels";
+import HomeCarousel from "../components/HomeCarousel";
+import HomeSlider from "../components/HomeSlider";
 
 export default function Home({ results }) {
+  const sliderChannels = yt.channels.filter(
+    (channel) => channel.category == "news"
+  );
+
+  const homeChannels = yt.channels.filter(
+    (channel) =>
+      channel.category == "independent" ||
+      channel.category == "documentary" ||
+      channel.category == "science"
+  );
+
   return (
     <div>
       <Head>
@@ -21,8 +34,11 @@ export default function Home({ results }) {
       {/* Nav */}
       <Nav />
 
+      <HomeCarousel channels={sliderChannels} />
+
       {/* Results */}
-      <Channels list={yt.channels} />
+      <Channels list={homeChannels} />
+      {/* <HomeSlider list={homeChannels} /> */}
       {/* <Results results={results} /> */}
     </div>
   );

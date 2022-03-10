@@ -6,7 +6,7 @@ import Playlist from "./Playlist";
 function Playlists({ playlists }) {
   const playList = playlists || [];
   return (
-    <Flipper className='px-5 my-10 sm:grid md:grid-cols-1 bg-gray-700'>
+    <Flipper className='px-5 my-10 sm:grid md:grid-cols-1 bg-gray-700 overflow-y-hidden'>
       {playList.map((playlist) => {
         // console.log("PL", playlist);
         return (

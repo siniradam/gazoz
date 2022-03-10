@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { forwardRef } from "react";
 
-const Channel = forwardRef(({ data }, ref) => {
+const Channel = forwardRef(({ data, hideTitle, hideDescription }, ref) => {
   const router = useRouter();
   return (
     <div
@@ -14,23 +14,23 @@ const Channel = forwardRef(({ data }, ref) => {
         router.push("/channel/" + data.id);
       }}
     >
-      {data.thumbnail ? (
-        <Image
-          layout='responsive'
-          src={`/channels/${data.thumbnail}`}
-          width={1920}
-          height={1080}
-          alt={data.title}
-          className='rounded-md'
-        />
-      ) : (
-        <p>{data.title}</p>
-      )}
+      <Image
+        layout='responsive'
+        src={`/channels/${data.thumbnail}`}
+        width={1920}
+        height={1080}
+        alt={data.title}
+        className='rounded-md'
+      />
       <div>
-        <p className='truncate max-w-md'>{data.description}</p>
-        <h2 className='mt-1 text-2xl text-white transition-all duration-100 ease-in-out'>
-          {data.title}
-        </h2>
+        {!hideDescription && (
+          <p className='truncate max-w-md'>{data.description}</p>
+        )}
+        {!hideTitle && (
+          <h2 className='mt-1 text-2xl text-white transition-all duration-100 ease-in-out'>
+            {data.title}
+          </h2>
+        )}
         {/* <p className='flex items-center opacity-0 group-hover:opacity-100'>
           <ThumbUpIcon className='h-5 mx-2' />
         </p> */}

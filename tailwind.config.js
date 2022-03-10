@@ -9,6 +9,12 @@ module.exports = {
       screens: {
         "3xl": "2000px",
       },
+      height: {
+        "12w": "12vw",
+      },
+      height: {
+        "20w": "20vw",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

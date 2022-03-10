@@ -300,7 +300,7 @@ export default {
       isLive: false,
       category: "universities",
       thumbnail: "koc_thumbnail.jpg",
-      // poster: "koc_poster.jpg",
+      poster: "koc_poster.jpg",
       description: "Koç Üniversitesi resmi kanalı.",
       playlists: [],
     },
@@ -310,7 +310,7 @@ export default {
       isLive: false,
       category: "artsandculture",
       thumbnail: "iksv_thumbnail.jpg",
-      // poster: "iksv_poster.jpg",
+      poster: "iksv_poster.jpg",
       description:
         "İstanbul Kültür Sanat Vakfı’nın (İKSV) resmi kanalı. İKSV, 1973'ten bu yana kültür ve sanatın gelişimi için çalışan bağımsız bir kurumdur.",
       playlists: [
@@ -326,7 +326,7 @@ export default {
       isLive: false,
       category: "news",
       thumbnail: "plus90_thumbnail.jpg",
-      // poster: "plus90_poster.jpg",
+      poster: "plus90_poster.jpg",
       description:
         "+90 Türkiye’deki en güncel konuları ve gelişmeleri takip etmek isteyenler için YouTube üzerinden yayın yapan yepyeni ve tarafsız bir haber kanalı.",
       playlists: [],
@@ -337,7 +337,7 @@ export default {
       isLive: false,
       category: "news",
       thumbnail: "32gun_thumbnail.jpg",
-      // poster: "32gun_poster.jpg",
+      poster: "32gun_poster.jpg",
       description:
         "Mehmet Ali Birand'ın sunduğu ekran klasiği 32. Gün programının 1985'ten bugüne video arşivi. ",
       playlists: [
@@ -353,7 +353,7 @@ export default {
       isLive: false,
       category: "entertainment",
       thumbnail: "muebbet_thumbnail.jpg",
-      // poster: "muebbet_poster.jpg",
+      poster: "muebbet_poster.jpg",
       description:
         "Müebbet Muhabbet Güney Dakota'da Flusi ve Sadrettin tarafından kurulmuştur. 1992'den bu yana kanal, onların küçük torunları Cenk ve Erdem tarafından işletilmektedir.",
       playlists: [],
@@ -364,7 +364,7 @@ export default {
       isLive: false,
       category: "documentary",
       thumbnail: "cephikayeleri_thumbnail.jpg",
-      // poster: "cephikayeleri_poster.jpg",
+      poster: "cephikayeleri_poster.jpg",
       description:
         "Cep Hikayeleri, çevremizde farkına varmadan geçip gittiğimiz insan hikayelerinin peşine düşer. Bir esnaf, bir sanatçı, bir genç veya bir yaşlı; Cep Hikayeleri'ne göre herkesin anlatacak bir hikayesi vardır.",
       playlists: [],
@@ -375,7 +375,7 @@ export default {
       isLive: false,
       category: "artsandculture",
       thumbnail: "artjurnal_thumbnail.jpg",
-      // poster: "artjurnal_poster.jpg",
+      poster: "artjurnal_poster.jpg",
       description: "Artjurnal",
       playlists: [],
     },
@@ -385,7 +385,7 @@ export default {
       isLive: false,
       category: "documentary",
       thumbnail: "hikayesi_thumbnail.jpg",
-      // poster: "hikayesi_poster.jpg",
+      poster: "hikayesi_poster.jpg",
       description:
         "This channel covers all the interesting stories on earth that either happened or not happened yet. You'll love it.",
       playlists: [],
