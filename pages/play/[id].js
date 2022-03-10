@@ -36,6 +36,7 @@ function Play({ video }) {
       autoplay: 1,
       rel: 0,
       modestbranding: 1,
+      origin: "https://gazoz.vercel.app",
     },
   };
 
