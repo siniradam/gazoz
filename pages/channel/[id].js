@@ -44,13 +44,13 @@ export async function getServerSideProps(context) {
 
   const uploads =
     (await fetch(
-      `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=8&key=${YOUTUBE_KEY}`
+      `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=16&key=${YOUTUBE_KEY}`
     ).then((res) => res.json())) || [];
 
   let playlistItems = channel.playlists;
   const playlists = playlistItems[0]
     ? await fetch(
-        `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${playlistItems[0].id}&maxResults=8&key=${YOUTUBE_KEY_ALT}`
+        `${youtube.apiurl}/playlistItems?part=snippet&playlistId=${playlistItems[0].id}&maxResults=12&key=${YOUTUBE_KEY_ALT}`
       ).then((res) => res.json())
     : [];
 
