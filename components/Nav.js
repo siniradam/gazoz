@@ -24,7 +24,7 @@ function Nav() {
           );
         })}
       </div>
-      <div className='absolute top-0 right-0 bg-gradient-to-l from-gray-800 h-10 w-1/12'></div>
+      <div className='absolute top-0 right-0 bg-gradient-to-l from-gray-800 h-10 w-1/12 pointer-events-none'></div>
     </nav>
   );
 }
